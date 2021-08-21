@@ -57,10 +57,11 @@ expressShipping.addEventListener('click', function(){
 })
 submitBtn.addEventListener('click', function(){
     let totalValue = Number(total.innerText);
-    const inputField = document.getElementById('promo-code').value;
-    if(inputField == "stevekaku"){
+    const inputField = document.getElementById('promo-code');
+    if(inputField.value == "stevekaku"){
         let newTotalValue = (totalValue * 20)/100;
         let newtotal = totalValue - newTotalValue;
         discountTotal.innerText = newtotal;
+        inputField.value = " ";
     }
 })
